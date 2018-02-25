@@ -7,7 +7,7 @@ IDP should allow clients to safely allow authentication and authorization using 
 OAuth 2.0(authorization) and OpenID Connect(authentication)
 OAuth 2.0 is an open protocol to allow secure authorization in a simple and standard method for web, mobile and desktop application 
 
-IdentityServer and Azure AD are security token service which impliments these standards. it exposes endpoints as defined by OAuth 2.0 specification.
+IdentityServer, Azure AD and Auth0 are security token service which impliments these standards. it exposes endpoints as defined by OAuth 2.0 specification.
 
 OpenID Connect is simple identity layer on top of Auth2.0 protocol. So OpenID Connect extends OAuth 2.0.
 
@@ -28,3 +28,17 @@ WebAPI
 Desktop Applications
 Mobile Applications
 Hybrid Mobile Applications
+
+
+
+Discovery Endpoint
+http://localhost:53381/.well-known/openid-configuration
+
+Authorization endpoint - used by client to obtain authentication and authorization
+Token Endpoint - used by application to programatically request token
+Redirection endpoint - where the tokens are delivered to and from the authorization endpoint
+
+
+
+HTTPS- TLS transport level security is must
+

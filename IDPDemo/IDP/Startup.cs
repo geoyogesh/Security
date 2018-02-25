@@ -16,6 +16,9 @@ namespace IDP
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddMvc();
+
             services.AddIdentityServer()
                 .AddDeveloperSigningCredential() // https://stackoverflow.com/questions/46142991/what-is-the-signing-credential-in-identityserver4
                 .AddTestUsers(Config.GetUsers())
@@ -35,7 +38,8 @@ namespace IDP
             }
 
             app.UseIdentityServer();
-
+            app.UseStaticFiles();
+            app.UseMvcWithDefaultRoute();
             
         }
     }
