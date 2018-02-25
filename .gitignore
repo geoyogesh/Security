@@ -297,4 +297,6 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
-IDPDemo/IDP/log-20180225.txt
+
+
+log-*.txt

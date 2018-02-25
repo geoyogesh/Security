@@ -68,7 +68,21 @@ namespace IDP
                         new Secret("secret".Sha256())
                     },
                     AlwaysIncludeUserClaimsInIdToken = true
+                },
+                new Client {
+                    ClientId = "windows-client",
+                    ClientName = "Windows Client",
+                    AllowedGrantTypes = {
+                        GrantType.AuthorizationCode
+                    },
+                    AllowedScopes = new List<string> { "openid", "profile"},
+                    RedirectUris = new List<string> { "urn:ietf:wg:oauth:2.0:oob" },
+                    ClientSecrets =
+                    {
+                        new Secret("secret".Sha256())
+                    },
                 }
+               
             };
         }
     }
