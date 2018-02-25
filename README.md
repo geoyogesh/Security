@@ -44,3 +44,15 @@ Redirection endpoint - where the tokens are delivered to and from the authorizat
 
 HTTPS- TLS transport level security is must
 
+Different Flows
+Basic OP
+Implicit OP
+Hybrid OP
+Config OP
+Dynamic OP
+
+Other Providers 
+https://openid.net/certification/
+
+https://jwt.io/
+

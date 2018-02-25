@@ -1,4 +1,5 @@
-﻿using IdentityServer4.Models;
+﻿using IdentityServer4;
+using IdentityServer4.Models;
 using IdentityServer4.Test;
 using System;
 using System.Collections.Generic;
@@ -51,6 +52,22 @@ namespace IDP
                     PostLogoutRedirectUris = new List<string> { "http://localhost:4200/" },
                     AllowedCorsOrigins = new List<string> { "http://localhost:4200" },
                     AllowAccessTokensViaBrowser = true
+                },
+                new Client {
+                    ClientId = "asp.netcore_webapp",
+                    ClientName = "ASP.NET Core WebApplication",
+                    AllowedGrantTypes = GrantTypes.Hybrid,
+                    AllowedScopes = new List<string>
+                    {
+                        IdentityServerConstants.StandardScopes.OpenId, IdentityServerConstants.StandardScopes.Profile
+                    },
+                    RedirectUris = new List<string> { "http://localhost:55616/signin-oidc" },
+
+                    ClientSecrets =
+                    {
+                        new Secret("secret".Sha256())
+                    },
+                    AlwaysIncludeUserClaimsInIdToken = true
                 }
             };
         }
