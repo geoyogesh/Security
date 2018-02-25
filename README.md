@@ -34,6 +34,8 @@ Hybrid Mobile Applications
 Discovery Endpoint
 http://localhost:53381/.well-known/openid-configuration
 
+public and confidential clients
+
 Authorization endpoint - used by client to obtain authentication and authorization
 Token Endpoint - used by application to programatically request token
 Redirection endpoint - where the tokens are delivered to and from the authorization endpoint
